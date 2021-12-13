@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 @import url('../assets/style/partials/variables.scss');
+$mainColor: #2982f9;
 
 .container {
     height: 120px;
@@ -52,12 +53,13 @@ export default {
             height: 120px;
             line-height: 120px;
             color: #1c1c1c;
+            font-weight: bold;
             text-decoration: none;
             margin: 0 10px;
 
             &.active, &:hover {
-                color: #2982f9;
-                border-bottom: 4px solid #2982f9;
+                color: $mainColor;
+                border-bottom: 4px solid $mainColor;
             }
         }
     }

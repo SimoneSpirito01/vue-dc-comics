@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="big-logo">
-
+                    <img src="../assets/img/dc-logo-bg.png" alt="big-logo">
                 </div>
             </div>
                 
@@ -88,7 +88,18 @@
 
         <div class="bottom">
             <div class="container">
-
+                <div class="sign-up">
+                    Sign-up now!
+                </div>
+                <div class="social">
+                    <span>follow us</span>
+                    <img src="../assets/img/footer-facebook.png" alt="facebook-logo">
+                    <img src="../assets/img/footer-twitter.png" alt="twitter-logo">
+                    <img src="../assets/img/footer-youtube.png" alt="youtube-logo">
+                    <img src="../assets/img/footer-pinterest.png" alt="pintarest-logo">
+                    <img src="../assets/img/footer-periscope.png" alt="periscope-logo">
+                    
+                </div>
             </div>
         </div>
     </footer>
@@ -101,9 +112,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$mainColor: #2982f9;
 
 .top {
-    background-color: #2982f9;
+    background-color: $mainColor;
     
     .container {
         display: flex;
@@ -135,11 +147,10 @@ export default {
     .container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        height: 350px;
 
         .links {
         display: flex;
+        padding: 40px 0;
 
             .col {
                 margin: 0 20px;
@@ -156,6 +167,7 @@ export default {
 
                     li {
                         margin: 5px 0;
+                        color: #948f8f;
                     }
                 }
 
@@ -167,13 +179,60 @@ export default {
 
         .big-logo {
             width: 40%;
-            height: 100%;
-            background-image: url(../assets/img/dc-logo-bg.png);
-            background-position: center;
-            background-size: cover;
-            transform: scale(1.1);
+            position: relative;
+
+            img {
+                width: 120%;
+                max-width: 500px;
+                position: absolute;
+                right: 0;
+                object-fit: cover;
+                object-position: center;
+                transform: translateY(-12%);
+            }
         }
 
+    }
+}
+
+.bottom {
+    background-color: #303030;
+    position: relative;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .sign-up {
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border: 2px solid $mainColor;
+            cursor: pointer;
+
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+
+            span {
+                color: $mainColor;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-right: 15px;
+                cursor: pointer;
+
+            }
+
+            img {
+                width: 35px;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+        }
     }
 }
 
