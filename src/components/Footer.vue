@@ -73,7 +73,7 @@
         <div class="bottom">
             <div class="container">
                 <div class="sign-up">
-                    Sign-up now!
+                    <span>Sign-up now!</span>
                 </div>
                 <div class="social">
                     <span>follow us</span>
@@ -136,6 +136,12 @@ export default {
             display: flex;
             align-items: center;
             padding: 40px 0;
+            transition: transform 0.6s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
             img {
                 width: 50px;
@@ -177,6 +183,11 @@ export default {
                     li {
                         margin: 5px 0;
                         color: #948f8f;
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
 
@@ -218,9 +229,18 @@ export default {
         .sign-up {
             color: white;
             text-transform: uppercase;
-            padding: 10px 15px;
             border: 2px solid $mainColor;
             cursor: pointer;
+
+            span {
+                display: inline-block;
+                padding: 10px 15px;
+                border: 1px solid transparent;
+
+                &:hover {
+                    border-color: $mainColor;
+                }
+            }
 
         }
 
@@ -241,6 +261,11 @@ export default {
                 width: 35px;
                 margin: 0 10px;
                 cursor: pointer;
+                transition: transform 0.2s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }

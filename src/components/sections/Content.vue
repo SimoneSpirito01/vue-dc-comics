@@ -203,6 +203,11 @@ export default {
                 width: calc(100% / 6 - 20px);
                 margin: 20px 10px;
                 cursor: pointer;
+                transition: transform 0.6s;
+
+                &:hover {
+                transform: scale(1.1);
+            }
             }
         }
 
@@ -216,6 +221,10 @@ export default {
                 background-color: $mainColor;
                 padding: 10px 40px;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: #2f65ad;
+                }
             }
         }
     }
