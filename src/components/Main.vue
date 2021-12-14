@@ -1,35 +1,28 @@
 <template>
   <main>
-      <div class="container">
-          <div class="text">
-              <span>--> Content Goes Here...</span>
-          </div>
-      </div>
+        <Hero/>
+        <Content/>
   </main>
 </template>
 
 <script>
+import Hero from './sections/Hero.vue'
+import Content from './sections/Content.vue'
+
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        Hero,
+        Content
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 
 main {
-    background-color: #1c1c1c;
 
-    .container {
-        height: 120px;
-        display: flex;
-        align-items: center;
-
-        .text {
-            font-size: 25px;
-            color: white;
-            
-        }
-    }
+    
 }
 
 </style>
